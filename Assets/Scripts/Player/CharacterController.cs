@@ -330,6 +330,9 @@ public class CharacterController : MonoBehaviour {
                 break;
 
             case InteractState.SpawnLure:
+                if (interactStateParameter.canSpawnLure) {
+                    interactBehaviorCtrl.doSpawnLure();
+                }
                 break;
 
             case InteractState.Inflate:
